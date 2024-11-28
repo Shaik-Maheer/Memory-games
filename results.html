@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Results</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: darkred;
+            color: aliceblue;
+            font-family: monospace;
+        }
+        .result-container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+        button {
+        text-transform: uppercase;
+        padding: 20px 30px;
+        font-size: 2rem;
+        font-weight: bolder;
+        border: none;
+        color: darkred;
+        margin-top: 30px;
+      }
+      button:focus {
+        transform: translateY(-5px);
+        background-color: darkred;
+        color: aliceblue;
+      }
+      
+    </style>
+</head>
+<body>
+        <div class="result-container">
+        <h1>Game Results</h1>
+        <p id="finalScore"></p>
+        <p id="finalAttempts"></p>
+        <p id="finalTime"></p>
+        <button onclick="goBack()" id="gameresult">Play Again</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const score = localStorage.getItem("score");
+            const attempts = localStorage.getItem("attempts");
+            const time = localStorage.getItem("time");
+            const cheer = new Audio("crowdcheer.mp3")
+
+            cheer.play()
+            document.getElementById("finalScore").textContent = `Score: ${score}`;
+            document.getElementById("finalAttempts").textContent = `Attempts: ${attempts}`;
+            document.getElementById("finalTime").textContent = `Time: ${time} seconds`;
+        });
+
+        function goBack() {
+            localStorage.clear();
+            window.location.href = "index.html"; // Change to your main game page
+        }
+    </script>
+</body>
+</html>

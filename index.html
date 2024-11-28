@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: darkred;
+}
+
+.start-container {
+  text-align: center;
+  color: aliceblue;
+  background-color: rgb(214, 33, 33);
+  padding: 100px 90px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.intro-image {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.start-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: darkred;
+  background-color: aliceblue;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  background-color: darkred;
+  color: aliceblue;
+}
+
+.start-button:focus {
+        transform: translateY(-5px);
+        background-color: rgb(214, 33, 33);
+        color: aliceblue;
+      }
+
+    </style>
+</head>
+<body>
+<div class="start-container">
+    <img src="https://repository-images.githubusercontent.com/745955242/e199e5ca-7d6a-472e-a445-dde2fc5a3221" alt="Memory Game" class="intro-image" />
+    <h1>Welcome to the Memory Game!</h1>
+    <p class="intro-text">Challenge yourself and test your memory skills!</p>
+    <button class="start-button" onclick="startGame()">Start Game</button>
+</div>
+  
+  <script>
+    function startGame() {
+      window.location.href = "index1.html";
+    }
+  </script>
+    
+</body>
+</html>
